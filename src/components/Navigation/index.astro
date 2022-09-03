@@ -1,0 +1,52 @@
+<div class='container'>
+  <div class='inner'>
+
+    <img src={} alt='logo'/>
+
+    <div>
+      <nav>
+        <a>Home</a>
+        <a>Work</a>
+        <a>Projects</a>
+        <a>Blog</a>
+      </nav>
+    </div>
+
+    <div class='socials'>
+      <a><img src={} alt='Github'/></a>
+      <a><img src={} alt='Youtube'/></a>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .container {
+    position: fixed;
+    width: 100%;
+    padding: 0 2rem;
+    top: 0;
+    z-index: 9999;
+    transition: 0.32 ease-in-out;
+  }
+  .inner {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  a {
+    padding: 0 0.5rem;
+    opacity: 0.75;
+  }
+  a:hover {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 480px) {
+    .socials {
+      display: none;
+    }
+  }
+
+</style>
