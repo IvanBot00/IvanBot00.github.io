@@ -1,57 +1,44 @@
-<div class='container'>
-  <div class='inner'>
-
-    <div>
-      <button>Toggle Theme</button>
-    </div>
-
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <a><span aria-hidden='true'>01</span>Home</a>
-          </li>
-          <li>
-            <a><span aria-hidden='true'>02</span>Work</a>
-          </li>
-          <li>
-            <a><span aria-hidden='true'>03</span>Blog</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
+<div class='nav-container'>
+  <div class='nav-inner'>
+    <nav>
+      <ul>
+        <li><a href="/#about"><span>01</span>About</a></li>
+        <li><a href="/#work"><span>02</span>Experience</a></li>
+      </ul>
+    </nav>
   </div>
 </div>
 
 <style>
-  .container {
-    padding: 1rem 2rem;
-    top: 0;
-    z-index: 9999;
-    transition: 0.32 ease-in-out;
-  }
-  .inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  a {
-    padding: 0 0.5rem;
-    opacity: 0.75;
-  }
-  a:hover {
-    opacity: 1;
-  }
+.nav-container {
+  top: 0;
+  padding: 1rem 2rem;
+}
+.nav-inner {
+  margin: auto;
+  max-width: 1000px;
+  display: flex;
+  justify-content: flex-end;
+}
 
-  ul {
-    display: flex;
-  }
+nav {
+  max-width: 400px;
+}
 
-  @media screen and (max-width: 480px) {
-    .socials {
-      display: none;
-    }
-  }
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0 1rem;
+}
 
+span {
+  margin-right: 0.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
 </style>
