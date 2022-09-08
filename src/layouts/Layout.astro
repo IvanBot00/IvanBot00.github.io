@@ -43,10 +43,6 @@ const { title } = Astro.props;
 		background-color: #ffc107;
 	}
 
-	body {
-		margin: 0;
-	}
-
 	.page-container {
 		margin: 2rem;
 		padding: 1rem;
@@ -58,14 +54,16 @@ const { title } = Astro.props;
 		.page-container {
 			margin: 0;
 			border-radius: 0;
-			min-width: 100%;
-			max-width: 100%;
 		}
 	}
 
 </style>
 
 <style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+	}
 	h1 {
 		font-size: var(--font-size-xl);
 	}
