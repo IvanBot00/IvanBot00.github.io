@@ -24,9 +24,16 @@ import Layout from '../layouts/Layout.astro';
 				</svg>
 			</div>
 			<div>
-				<p>Hello, my name is</p>
+				<h4>Hello, my name is</h4>
 				<h1>Ivan Carrillo.</h1>
-				<p>I am a software engineer.</p>
+				<p>
+					I am a software engineer based in California. I recently graduated from the
+					University of California, Riverside.
+				</p>
+				<div>
+					<a class='btn-primary'>Resume</a>
+					<a class='btn-primary'>Work</a>
+				</div>
 			</div>
 		</section>
 
@@ -51,6 +58,25 @@ import Layout from '../layouts/Layout.astro';
 		align-items: center;
 		flex-wrap: wrap;
 	}
+
+	.hero h1 {
+		margin-bottom: 1rem;
+	}
+
+	h4 {
+		font-style: normal;
+		font-weight: 300;
+		color: #919191;
+		margin-bottom: 0.5rem;
+	}
+
+	p {
+		margin-bottom: 1rem;
+		max-width: 30rem;
+		font-weight: 300;
+	}
+
+	.hero
 
 	#hero-icon {
 		width: 400px;
