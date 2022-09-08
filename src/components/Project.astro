@@ -1,0 +1,79 @@
+---
+const {
+    src,
+    alt,
+    title,
+    desc,
+} = Astro.props;
+---
+
+<div class='project-container'>
+    <div class='project-title'>
+        <h2>{title}</h2>
+    </div>
+    <div class='project-body'>
+        <div class='info'>
+            <p>{desc}</p>
+        </div>
+        <div class='img-container'>
+            <img src='/cat.png' />
+        </div>
+
+    </div>
+    <div class='project-footer'>
+        Github
+    </div>
+</div>
+
+<style>
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+
+    .project-title {
+        background-color: #333;
+        padding: 0.5rem 2rem;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+
+    .project-body {
+        background-color: rgb(43, 43, 43);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+
+    .project-footer {
+        background-color: #333;
+        padding: 0.5rem 2rem;
+        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+    }
+
+    .img-container {
+        max-width: 500px;
+        /* width: 50%; */
+    }
+
+    img {
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    img:hover {
+        transform: scale(0.98);
+    }
+
+    @media
+</style>

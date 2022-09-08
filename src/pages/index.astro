@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Project from '../components/Project.astro';
 ---
 
 <Layout title="Ivan Carrillo">
 	<main>
-
 		<section class='hero'>
 			<div>
 				<svg id='hero-icon' version="1.1" viewBox="0 0 752 752">
@@ -28,7 +28,7 @@ import Layout from '../layouts/Layout.astro';
 				<h1>Ivan Carrillo.</h1>
 				<p>
 					I am a software engineer based in California. I recently graduated from the
-					University of California, Riverside.
+					University of California, Riverside with a degree in computer science.
 				</p>
 				<div>
 					<a class='btn-primary'>Resume</a>
@@ -37,7 +37,13 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</section>
 
-		This is an example of a page
+		<section>
+			<h2>Projects</h2>
+			<Project
+				title="Gamespawn Game"
+				desc="A fire-emblem like strategy game created with Unity."
+			/>
+		</section>
 	
 	</main>
 </Layout>
