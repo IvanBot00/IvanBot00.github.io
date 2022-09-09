@@ -4,6 +4,8 @@ const {
     alt,
     title,
     desc,
+    github,
+    link,
 } = Astro.props;
 ---
 
@@ -21,7 +23,8 @@ const {
 
     </div>
     <div class='project-footer'>
-        Github
+        {github && (<a href={github}>Github</a>)}
+        {link && (<a href={link}>Link</a>)}
     </div>
 </div>
 
