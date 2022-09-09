@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Project from '../components/Project.astro';
+import Card from '../components/Card.astro';
+
+const GPUKeywords = ["CUDA C++"];
+const VRKeywords = ["C#", "Unity"]
 ---
 
 <Layout title="Ivan Carrillo">
@@ -50,6 +54,29 @@ import Project from '../components/Project.astro';
 				src="/cat.png"
 			/>
 		</section>
+
+		<section id="projects-list">
+			<h2>Other Projects</h2>
+			<ul class='grid'>
+				<li>
+					<Card 
+						title="GPU Accelerated Document Search" 
+						desc="A CUDA C++ program that calculates the BM25 score of a collection of documents."
+						keywords={GPUKeywords}
+						github="https://github.com/IvanBot00/gpu-doc-search"
+					/>
+				</li>
+				<li>
+					<Card
+						title="VR Archery"
+						desc="A game for the Oculus Quest created using the Oculus SDK."
+						keywords={VRKeywords}
+						github="https://github.com/IvanBot00/vr-archery-simulator"
+					/>
+				</li>
+
+			</ul>
+		</section>
 	
 	</main>
 </Layout>
@@ -94,6 +121,26 @@ import Project from '../components/Project.astro';
 		width: 400px;
 	}
 
+	#projects-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#projects-list h2 {
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		column-gap: 1rem;
+		row-gap: 3rem;
+	}
 
 
 	/* .text-gradient {

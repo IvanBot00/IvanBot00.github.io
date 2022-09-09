@@ -1,0 +1,55 @@
+---
+const {
+    title,
+    desc,
+    keywords,
+    github
+} = Astro.props;
+---
+
+<div class='card'>
+    <div class='header'>
+        <h3>{title}</h3>
+    </div>
+
+    <div class='links'>
+        {github && (<a href={github}><img src="./icons/icons8-github.svg"/></a>)}
+    </div>
+    <p>{desc}</p>
+    <ul>
+        {keywords && keywords.map(item => (
+            <li>{item}</li>
+        ))}
+    </ul>
+</div>
+
+<style>
+    .card {
+        height: 100%;
+        background-color: #333;
+        border-radius: 20px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .links {
+        margin-top: 1rem;
+    }
+
+    p {
+        margin-top: 1rem;
+    }
+
+    ul {
+        margin-top: 1rem;
+        list-style-type: none;
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+        color: var(--color-subtext);
+        align-items: flex-end;
+    }
+</style>
+
